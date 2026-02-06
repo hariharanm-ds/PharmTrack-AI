@@ -1,0 +1,267 @@
+/* --- Global Variables for Emergency UI --- */
+:root {
+    --color-primary: #004c99;      /* Deep Hospital Blue */
+    --color-accent: #3399ff;       /* Light Blue */
+    --color-panic: #dc3545;        /* Bright Red */
+    --color-panic-hover: #c82333;
+    --color-success: #28a745;      /* Green for WhatsApp/Location */
+    --color-background: #f7f9fc;
+    --color-card-bg: #ffffff;
+    --color-text-dark: #212529;
+    --color-text-muted: #6c757d;
+    --border-radius: 8px;
+    --shadow-heavy: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* --- Base Container --- */
+.emergency-container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: var(--color-background);
+    border-radius: var(--border-radius);
+}
+
+.emergency-container h2 {
+    color: var(--color-panic);
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 1.8em;
+    font-weight: 700;
+}
+
+.emergency-container section {
+    background-color: var(--color-card-bg);
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-heavy);
+}
+
+.emergency-container h3 {
+    color: var(--color-primary);
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 1.2em;
+    border-bottom: 2px solid var(--color-primary);
+    padding-bottom: 8px;
+}
+
+/* --- 1. National Hotline Section (Most prominent) --- */
+.national-hotline-section {
+    border: 3px solid var(--color-panic);
+}
+
+.national-hotline-button {
+    width: 100%;
+    padding: 20px;
+    background-color: var(--color-panic);
+    color: white;
+    font-size: 1.2em;
+    font-weight: 700;
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(220, 53, 69, 0.4);
+    transition: background-color 0.2s;
+}
+
+.national-hotline-button:hover {
+    background-color: var(--color-panic-hover);
+}
+
+/* --- 2. Panic Button Section --- */
+.panic-section {
+    text-align: center;
+}
+
+.panic-button {
+    display: block;
+    width: 100%;
+    padding: 18px;
+    margin-bottom: 15px;
+    text-align: center;
+    font-size: 1.1em;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: var(--border-radius);
+    background-color: var(--color-primary);
+    color: white;
+    transition: opacity 0.2s, background-color 0.2s;
+}
+
+.panic-button:hover {
+    background-color: var(--color-accent);
+}
+
+.disabled-button {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.contact-info {
+    font-size: 0.9em;
+    color: var(--color-text-dark);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.clear-button {
+    background: none;
+    border: 1px solid var(--color-panic);
+    color: var(--color-panic);
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.8em;
+}
+
+/* --- 3. Location Share Section --- */
+.share-buttons {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.share-button {
+    flex: 1;
+    text-align: center;
+    padding: 15px;
+    border-radius: var(--border-radius);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.whatsapp-button {
+    background-color: var(--color-success);
+    color: white;
+}
+
+.sms-button {
+    background-color: var(--color-accent);
+    color: white;
+}
+
+.location-unavailable, .map-link-text {
+    font-size: 0.9em;
+    text-align: center;
+    margin-top: 10px;
+}
+.map-link-text a {
+    color: var(--color-accent);
+}
+
+/* --- 4. Contact Setup --- */
+.contact-setup .input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.contact-setup input {
+    padding: 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    font-size: 1em;
+}
+
+.save-button {
+    width: 100%;
+    padding: 14px;
+    background-color: var(--color-primary);
+    color: white;
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.2s;
+}
+
+.save-button:hover {
+    background-color: var(--color-accent);
+}
+
+/* --- 5. Quick Numbers (Grid Layout) --- */
+.emergency-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 15px;
+}
+
+.number-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 10px;
+    text-decoration: none;
+    border: 2px solid var(--color-accent);
+    border-radius: var(--border-radius);
+    background-color: #eaf5ff; /* Light blue background */
+    color: var(--color-primary);
+    transition: transform 0.2s;
+}
+
+.number-card strong {
+    font-size: 1.5em;
+    margin-top: 5px;
+}
+
+.number-card:hover {
+    transform: translateY(-2px);
+    background-color: var(--color-accent);
+    color: white;
+}
+
+/* --- 6. Hospitals List --- */
+.hospital-list {
+    list-style: none;
+    padding: 0;
+}
+
+.hospital-list li {
+    padding: 10px 0;
+    border-bottom: 1px dashed var(--border-color);
+    line-height: 1.5;
+}
+
+.hospital-list li a {
+    color: var(--color-accent);
+    text-decoration: none;
+}
+
+/* --- 7. Final Map Button --- */
+.map-link {
+    text-align: center;
+}
+
+.map-button {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: var(--color-primary);
+    color: white;
+    text-decoration: none;
+    border-radius: var(--border-radius);
+    font-weight: 600;
+    transition: background-color 0.2s;
+}
+
+.map-button:hover {
+    background-color: var(--color-accent);
+}
+
+/* --- Responsiveness --- */
+@media (max-width: 480px) {
+    .emergency-container {
+        padding: 10px;
+        margin: 0;
+        min-height: 100vh;
+        border-radius: 0;
+    }
+    .share-buttons {
+        flex-direction: column;
+    }
+}

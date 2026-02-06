@@ -1,0 +1,28 @@
+.live-hospitals {
+  max-width: 700px;
+  margin: 30px auto;
+  padding: 20px;
+  background: #f4faff;
+  border-radius: 12px;
+  box-shadow: 0 4px 14px rgba(0, 128, 255, 0.1);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.live-hospitals h2 {
+  text-align: center;
+  color: #007acc;
+  margin-bottom: 20px;
+}
+
+.live-hospitals ul {
+  list-style: none;
+  padding: 0;
+}
+
+.live-hospitals li {
+  background: #fff;
+  padding: 12px;
+  margin-bottom: 10px;
+  border-left: 6px solid #007acc;
+  border-radius: 8px;
+}

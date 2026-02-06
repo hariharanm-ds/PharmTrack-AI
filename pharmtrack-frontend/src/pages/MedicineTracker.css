@@ -1,0 +1,271 @@
+/* MedicineTracker.css */
+
+/* --- Base & Background --- */
+.max-w-container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding-left: 1.5rem; 
+    padding-right: 1.5rem;
+}
+
+.med-tracker-page {
+    min-height: 100vh;
+    padding-top: 5rem; 
+    padding-bottom: 3rem; /* Increased bottom padding */
+    /* Smoother, high-quality background gradient */
+    background: linear-gradient(to bottom right, #f8f5ff, #ffffff 40%, #f0f7ff); 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* --- Card Styling --- */
+.card, .header-card {
+    background-color: white;
+    border-radius: 1.25rem; /* Slightly larger radius (rounded-xl) */
+    /* Polished, deep shadow */
+    box-shadow: 0 15px 30px -10px rgba(0, 0, 0, 0.08), 0 5px 15px -5px rgba(0, 0, 0, 0.05);
+    padding: 2rem; /* p-8 - Increased padding for spacious feel */
+    border: 1px solid #e5e7eb; /* Subtle border */
+    transition: box-shadow 0.3s;
+}
+
+.header-card {
+    margin-bottom: 1.5rem;
+}
+
+/* --- Header Section --- */
+.header-content-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap; 
+    gap: 1.5rem; /* Increased gap */
+}
+
+.header-content-left {
+    display: flex;
+    align-items: center;
+    gap: 1rem; /* Increased gap */
+}
+
+.header-icon-wrapper {
+    /* Strong, primary gradient */
+    background: linear-gradient(to right, #7e22ce, #ec4899); 
+    border-radius: 9999px; 
+    padding: 0.85rem; /* Larger padding for the icon */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.icon-bell {
+    font-size: 2.25rem; /* Larger icon */
+    color: white;
+}
+
+.header-title {
+    font-size: 2rem; 
+    font-weight: 800; /* Bolder title */
+    color: #1f2937; 
+}
+
+.header-subtitle {
+    color: #4b5563; 
+    font-size: 1rem;
+}
+
+.lang-select {
+    padding: 0.6rem 1.2rem; 
+    border: 1px solid #d1d5db; 
+    border-radius: 0.6rem; 
+    font-weight: 600;
+}
+
+.lang-select:focus {
+    outline: none;
+    border-color: #a855f7;
+    box-shadow: 0 0 0 3px rgba(168, 85, 247, 0.2); 
+}
+
+/* --- Main Layout --- */
+.grid-layout {
+    display: grid;
+    gap: 2rem; /* Larger gap */
+}
+
+@media (min-width: 1024px) {
+    .grid-layout {
+        grid-template-columns: 2fr 1fr;
+    }
+}
+
+.main-content-area, .sidebar-area {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem; /* Larger space between sections */
+}
+
+/* --- Card Titles & Icons --- */
+.card-title {
+    font-size: 1.625rem; /* Text size between 2xl and 3xl */
+    font-weight: 800; 
+    color: #1f2937; 
+    margin-bottom: 1.5rem; /* More space below the title */
+    display: flex;
+    align-items: center;
+    gap: 0.75rem; 
+}
+
+/* --- Add Medicine Form --- */
+.form-grid {
+    display: grid;
+    gap: 1.25rem; /* Increased form spacing */
+}
+
+@media (min-width: 768px) {
+    .form-grid {
+        grid-template-columns: repeat(2, 1fr); 
+    }
+}
+
+.form-label {
+    font-size: 0.95rem; 
+    font-weight: 600; /* Bolder label */
+    color: #374151; 
+    margin-bottom: 0.4rem; 
+}
+
+.form-input {
+    width: 100%;
+    padding: 0.75rem 1rem; 
+    border: 1px solid #e5e7eb; 
+    border-radius: 0.6rem; 
+    font-size: 1rem;
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: #a855f7;
+    box-shadow: 0 0 0 2px rgba(168, 85, 247, 0.3); /* Clearer focus ring */
+}
+
+.error-message {
+    background-color: #fef2f2; 
+    border: 1px solid #fca5a5; 
+    color: #b91c1c; 
+    padding: 0.85rem 1.25rem; 
+    border-radius: 0.6rem; 
+    font-weight: 600;
+}
+
+.btn-primary {
+    /* Primary button gradient/shadow polished */
+    background: linear-gradient(to right, #7e22ce, #db2777); 
+    color: white;
+    padding: 1rem 1.5rem; 
+    border-radius: 0.75rem; 
+    font-size: 1.125rem; 
+    font-weight: 700; 
+    box-shadow: 0 6px 15px -3px rgba(147, 51, 234, 0.6); 
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px -5px rgba(147, 51, 234, 0.7); 
+}
+
+/* --- Schedule List & Buckets --- */
+.schedule-time-bucket {
+    border: 1px solid #d1d5db; /* Thinner, cleaner border */
+    border-radius: 1rem; 
+    padding: 1.25rem; 
+}
+
+.bucket-title {
+    font-weight: 700; 
+    color: #374151; /* Darker text */
+    margin-bottom: 1rem; 
+    font-size: 1.125rem;
+}
+
+.med-item {
+    padding: 1rem; /* Increased padding */
+    border-radius: 0.75rem; /* Smoother edges */
+    color: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15); /* Clearer shadow on item */
+    margin-bottom: 0.75rem; /* Space between items */
+    /* Ensure the time and name are prominent */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.med-name-time {
+    font-weight: 700; 
+    font-size: 1.125rem;
+}
+
+/* --- Time Bucket Color Definitions (High Contrast) --- */
+.bucket-morning, .med-item.bucket-morning {
+    background: linear-gradient(to right, #fcd34d, #ea580c); /* Yellow to deep Orange */
+}
+.bucket-afternoon, .med-item.bucket-afternoon {
+    background: linear-gradient(to right, #60a5fa, #0891b2); /* Blue to dark Cyan */
+}
+.bucket-evening, .med-item.bucket-evening {
+    background: linear-gradient(to right, #f97316, #dc2626); /* Orange to solid Red */
+}
+.bucket-night, .med-item.bucket-night {
+    background: linear-gradient(to right, #a855f7, #4f46e5); /* Purple to deep Indigo */
+}
+
+/* --- Active Reminder Sidebar --- */
+.reminder-details {
+    /* Critical Alert Gradient */
+    background: linear-gradient(to right, #dc2626, #be185d); 
+    color: white;
+    padding: 1.25rem; 
+    border-radius: 1rem; 
+    box-shadow: 0 4px 15px rgba(220, 38, 38, 0.4);
+}
+
+.btn-taken { 
+    background-color: #059669; /* Darker Green for prominence */
+    box-shadow: 0 3px 10px rgba(5, 150, 105, 0.4);
+    font-weight: 700;
+}
+.btn-taken:hover { background-color: #047857; }
+
+.btn-snooze { background-color: #2563eb; }
+.btn-snooze:hover { background-color: #1d4ed8; }
+
+.btn-missed { background-color: #ef4444; }
+.btn-missed:hover { background-color: #dc2626; }
+
+.btn-voice { background-color: #9333ea; }
+.btn-voice:hover { background-color: #7e22ce; }
+
+.btn-dismiss { background-color: #6b7280; }
+.btn-dismiss:hover { background-color: #4b5563; }
+
+/* --- Analytics --- */
+.analytics-item {
+    padding: 1rem; 
+    border-radius: 0.75rem; 
+}
+
+.analytics-value {
+    font-size: 1.75rem; 
+    font-weight: 800; /* Bolder value */
+}
+
+.btn-reset-all {
+    /* Reset button styling refined to match the other action buttons */
+    background-color: #ef4444; 
+    padding: 0.75rem 1rem; 
+    border-radius: 0.6rem; 
+    font-weight: 600; 
+}

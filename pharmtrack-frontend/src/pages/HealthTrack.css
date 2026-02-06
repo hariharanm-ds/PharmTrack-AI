@@ -1,0 +1,212 @@
+/* --- Global Variables (Clinical/Professional Theme) --- */
+:root {
+    --brand-primary: #004c99;       /* Deep Hospital Blue */
+    --brand-accent: #3399ff;        /* Lighter Blue for interactive elements */
+    --color-background: #f7f9fc;    /* Clean off-white background */
+    --color-card-bg: #ffffff;       /* White card background */
+    --color-text-dark: #2c3e50;
+    --color-text-muted: #7f8c8d;
+    --color-border: #dcdcdc;
+    --color-danger: #e74c3c;        /* Red for emergency */
+    --color-warning: #f39c12;       /* Orange for cautionary warnings */
+    --color-success: #2ecc71;       /* Green for Normal BP */
+    --color-elevated: #f1c40f;      /* Yellow for Elevated/Stage 1 */
+    --shadow-soft: 0 4px 15px rgba(0, 0, 0, 0.08);
+    --border-radius: 10px;
+}
+
+body {
+    font-family: 'Inter', 'Roboto', sans-serif;
+    background-color: var(--color-background);
+    color: var(--color-text-dark);
+}
+
+/* --- Main Container --- */
+.health-container {
+    max-width: 650px;
+    margin: 30px auto;
+    padding: 20px;
+}
+
+h2 {
+    color: var(--brand-primary);
+    text-align: center;
+    font-size: 1.8em;
+    margin-bottom: 25px;
+}
+h3 {
+    color: var(--brand-primary);
+    font-size: 1.3em;
+    margin-bottom: 15px;
+    border-bottom: 1px solid var(--color-border);
+    padding-bottom: 8px;
+}
+
+/* --- Form Section --- */
+.health-form {
+    background-color: var(--color-card-bg);
+    padding: 30px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-soft);
+    margin-bottom: 30px;
+}
+
+.health-form label {
+    display: block;
+    font-weight: 600;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    color: var(--color-text-dark);
+}
+
+.health-form input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--color-border);
+    border-radius: 6px;
+    font-size: 1em;
+    transition: border-color 0.3s;
+    box-sizing: border-box;
+}
+
+.health-form input:focus {
+    border-color: var(--brand-accent);
+    outline: none;
+}
+
+.save-button { /* Corrected button class */
+    width: 100%;
+    padding: 15px;
+    background-color: var(--brand-primary);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 1.1em;
+    font-weight: 700;
+    cursor: pointer;
+    margin-top: 25px;
+    transition: background-color 0.3s;
+}
+
+.save-button:hover {
+    background-color: var(--brand-accent);
+}
+
+/* --- Latest Entry Card --- */
+.latest-entry-card { /* Corrected card class */
+    background-color: var(--color-card-bg);
+    padding: 30px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-soft);
+}
+
+.entry-item {
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px dashed #f0f0f0;
+    font-size: 1.05em;
+}
+
+.entry-item:last-of-type {
+    border-bottom: none;
+}
+
+.entry-icon {
+    margin-right: 15px;
+    font-size: 1.3em;
+    width: 30px;
+    text-align: center;
+}
+
+.entry-item strong {
+    font-weight: 700;
+    margin-right: 5px;
+}
+
+/* --- BP Category Styling --- */
+.bp-category {
+    display: inline-block;
+    font-size: 0.8em;
+    padding: 3px 8px;
+    border-radius: 4px;
+    margin-left: 10px;
+    font-weight: 700;
+    color: white;
+}
+
+.bp-green { background-color: var(--color-success); }
+.bp-yellow { background-color: var(--color-elevated); }
+.bp-orange { background-color: var(--color-warning); }
+.bp-red { background-color: var(--color-danger); }
+
+/* --- Alert Messages (Error and Warning) --- */
+.alert-message { /* Unified alert class */
+    padding: 15px;
+    border-radius: 6px;
+    font-weight: 600;
+    margin-top: 15px;
+    border: 1px solid transparent;
+    text-align: center;
+}
+
+.error-message { /* For validation errors */
+    background-color: #fcebeb;
+    color: var(--color-danger);
+    border-color: var(--color-danger);
+}
+
+.warning-message { /* For health warnings */
+    background-color: #fff4e5;
+    color: var(--color-warning);
+    border-color: var(--color-warning);
+}
+
+/* --- History Preview Section --- */
+.history-preview-section { /* New class for the history container */
+    margin-top: 18px;
+    padding-top: 10px;
+    border-top: 1px solid var(--color-border);
+}
+
+.history-preview-title { /* New class for the history heading */
+    color: var(--brand-accent);
+    margin: 10px 0 8px;
+    font-size: 1.1em;
+}
+
+.history-preview-list { /* New class for the scrollable list */
+    max-height: 200px;
+    overflow-y: auto;
+    border: 1px solid #eef5fb;
+    border-radius: 12px;
+    padding: 10px;
+    background: #f9fcff;
+}
+
+.history-item { /* Specific style for history list items */
+    font-size: 0.9em;
+    margin-bottom: 5px;
+}
+
+/* --- No Records Message --- */
+.no-records-message { /* New class for the placeholder text */
+    color: var(--color-text-muted);
+    font-style: italic;
+    text-align: center;
+    padding: 10px 0;
+}
+
+/* --- Responsiveness --- */
+@media (max-width: 480px) {
+    .health-container {
+        margin: 0;
+        padding: 10px;
+    }
+    .health-form, .latest-entry-card {
+        padding: 20px;
+    }
+    h2 {
+        font-size: 1.6em;
+    }
+}
